@@ -1,0 +1,15 @@
+{
+  "name": "texas-holdem",
+  "version": "1.0.0",
+  "description": "Texas Hold'em game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sameperson",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "gulp": "^3.9.1"
+  }
+}
