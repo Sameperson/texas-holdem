@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html data-ng-app="" lang="en">
+<html data-ng-app="" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
-    <title>Hello world!</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" th:href="@{/favicon.png}"/>
+
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" th:href="@{/css/app.css}"/>
+
+    <title>Moods| Home</title>
 </head>
 <body>
-    Hello world!
-    <input ng-model="hello" />
-    {{hello}}
+<div class="navbar-fixed">
+    <nav>
+        <div class="container">
+            <a th:href="@{/}" class="brand-logo">Texas <span>Hold'</span>em</a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/friends}">Friends</a></li>
+                <li><a th:href="@{/favorites}">Favorites</a></li>
+            </ul>
+            <ul id="mobile-nav" class="side-nav">
+                <li class="active"><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/friends}">Friends</a></li>
+                <li><a th:href="@{/favorites}">Favorites</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="profile container">
+    <div class="login-form">
+        Hello world!
+        <input ng-model="hello" />
+        {{hello}}
+    </div>
+</div>
+<script src="vendor/jquery/jquery-1.11.3.js"></script>
+<script src="vendor/materialize/js/materialize.js"></script>
+<script type="text/javascript" src="vendor/angular/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
-<script type="text/javascript" src="angular/angular.js"></script>
 </html>
+
