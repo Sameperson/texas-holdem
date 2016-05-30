@@ -30,6 +30,7 @@ bootRun {
 }
 
 dependencies {
+	compile("net.sourceforge.nekohtml:nekohtml:1.9.21")
 	compile('org.springframework.boot:spring-boot-devtools')
 	compile('org.projectlombok:lombok:1.16.6')
 	compile('org.springframework.boot:spring-boot-starter-security')
@@ -37,7 +38,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
-
 
 eclipse {
 	classpath {

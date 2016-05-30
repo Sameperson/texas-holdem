@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html data-ng-app="" lang="en" xmlns:th="http://www.thymeleaf.org">
+<html ng-app="main" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
     <link rel="icon" th:href="@{/favicon.png}"/>
-
     <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" th:href="@{/css/app.css}"/>
-
-    <title>Moods| Home</title>
+    <title>Texas Hold'em</title>
 </head>
-<body>
+<body ng-controller="MainController as main">
 <div class="navbar-fixed">
     <nav>
         <div class="container">
@@ -34,8 +31,14 @@
 <div class="profile container">
     <div class="login-form">
         Hello world!
-        <input ng-model="hello" />
-        {{hello}}
+        <input ng-model="main.hello"/>
+        {{main.hello}}
+    </div>
+    <div>
+        <button ng-click="main.louder()">OK</button>
+    </div>
+    <div>
+        <login-form></login-form>
     </div>
 </div>
 <script src="vendor/jquery/jquery-1.11.3.js"></script>

@@ -1,6 +1,6 @@
 var gulp = require("gulp"),
     util = require("gulp-util")
-    rename = require('gulp-rename'),
+    // rename = require('gulp-rename'),
     log = util.log;
 
 gulp.task("default", ["angular-handling"]);
