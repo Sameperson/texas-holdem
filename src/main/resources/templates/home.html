@@ -18,12 +18,12 @@
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a th:href="@{/}">Home</a></li>
                 <li><a th:href="@{/friends}">Friends</a></li>
-                <li><a th:href="@{/favorites}">Favorites</a></li>
+                <li><a href="" ng-click="main.helloConsole(); main.loadLeaderboard();">Leaderbord</a></li>
             </ul>
             <ul id="mobile-nav" class="side-nav">
                 <li class="active"><a th:href="@{/}">Home</a></li>
                 <li><a th:href="@{/friends}">Friends</a></li>
-                <li><a th:href="@{/favorites}">Favorites</a></li>
+                <li><a th:href="@{/leaderboard}">Leaderboard</a></li>
             </ul>
         </div>
     </nav>
@@ -34,9 +34,12 @@
         <input ng-model="main.hello"/>
         {{main.hello}}
     </div>
-    <div>
-        <button ng-click="main.louder()">OK</button>
-    </div>
+    <table>
+        <tr ng-repeat="player in main.leaderboard">
+            <td>{{player.name}}</td>
+            <td>{{player.score}}</td>
+        </tr>
+    </table>
     <div>
         <login-form></login-form>
     </div>
