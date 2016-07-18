@@ -6,6 +6,15 @@ $(function () {
 
 var mainModule = angular.module('main', [])
 
+    .config(function($routeProvider) {
+        $routeProvider
+            .when("/leaderboard", {
+                template : '<leaderboard></leaderboard>'
+            })
+
+    })
+
+
     .controller('MainController', function MainController($scope, dataService) {
         var app = this;
         this.hello = "Hello!";

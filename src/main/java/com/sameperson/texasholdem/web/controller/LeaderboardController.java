@@ -1,4 +1,4 @@
-package com.sameperson.texasholdem.controller;
+package com.sameperson.texasholdem.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
